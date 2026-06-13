@@ -1,0 +1,20 @@
+
+import math
+
+try:
+    archive_size=float(input("Enter the total archive size in GB: "))
+    cloud_storage=int(input("Enter the number of target cloud storage volumes: "))
+
+
+    small_size= math.ceil (archive_size/cloud_storage )
+
+    print("Each cloud_storage volume should store")
+    print(small_size, "GB")
+
+
+except ZeroDivisionError:
+    print("Error:  number of volumes cannot be zero")
+
+
+except ValueError:
+    print("Error: please enter numeric values only") 
